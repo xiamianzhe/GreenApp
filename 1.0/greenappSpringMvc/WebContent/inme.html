@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>infe</title>
+<script type="text/javascript" 
+      src="js/jquery-1.11.3.min.js">
+</script>
+</head>
+	<link type="text/css" rel="stylesheet" href="css/css.css" />
+
+<body onload="test()">
+	<div id="aa" frameborder="no">
+	<div class="mainbody" >
+    <div class="currmenu">
+      <ul class="rig_nav">
+        <li class="rig_seleli"><a href="#">当前</a><span> x </span></li>
+        <li><a href="#">个人中心</a></li>
+        <li><a href="#">绩效管理</a></li>
+        <li><a href="#">绩效计划制定</a></li>
+      </ul>
+    </div>
+    <div class="adtip">
+      <div class="tip">
+        <p class="goom">早上好，咸鱼！</p>
+        <p>您目前有<span>15</span>条待办，<span>1</span>条考勤异常，<span>2</span>条通知！</p>
+      </div>
+      <div class="adv">
+        <p>请输入要搜索的内容</p>
+        <span class="tubiao"><img src="images/ss.jpg"  height="39"; width="39";  style="position:absolute; left:1090px; top:58px; " ></span> </div>
+    </div>
+    <div class="rig_link">
+      <ul>
+        <li><a href="#"><img src="images/img_01.jpg" alt="" title=""></a></li>
+        <li><a href="#"><img src="images/img_02.jpg" alt="" title=""></a></li>
+        <li><a href="#"><img src="images/img_05.jpg" alt="" title="" style="opacity: 0.8" ></a></li>
+        <li><a href="#"><img src="images/img_04.jpg" alt="" title=""></a></li>
+      </ul>
+    </div>
+    <div class="rig_lm01">
+      <div class="title"><img src="images/listicon.jpg" class="icon" style="padding-top:13px;">
+        <h2>通知</h2>
+        <span class="red_numb">2</span></div>
+      <div class="detail">
+        <div class="dat01"> <span class="datti"><span>20</span> <br />
+          <span class="jan">jan</span></span> <span class="sqdeta"><img src="images/bs_03.jpg"> 你添加的生产员王五以成功</span>
+          <p class="linkbut"><a href="#"></a><a href="#">查看</a><a href="#">知道了</a></p>
+        </div>
+        <div class="dat02"> <span class="datti"><span>20</span> <br />
+          <span class="jan">jan</span></span> <span class="sqdeta"><img src="images/bs_04.jpg"> 你添加的生产员王五出现故障</span>
+          <p class="linkbut"><a href="#">查看</a><a href="#">知道了</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="rig_lm02">
+      <div class="title"><img src="images/listicon.jpg" class="icon" style="padding-top:13px;">
+        <h2>项目完成进度</h2>
+      </div>
+      <div class="detail">
+        <div class="det_inner">
+          <div class="jd"><img src="images/jd.jpg" alt="" title=""></div>
+          <div class="bs">
+            <p><img src="images/bs_01.jpg" alt="" title=""> 已完成人员</p>
+            <p><img src="images/bs_02.jpg" alt="" title=""> 未完成人员</p>
+          </div>
+          <div class="scordeti">
+            <ul>
+              <li>
+                <p class="ywc">1024</p>
+                <h3>已完成人员</h3>
+              </li>
+              <li>
+                <p class="wwc">18</p>
+                <h3>未完成人员</h3>
+              </li>
+              <li>
+                <p class="ycd">2</p>
+                <h3>异常人员</h3>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rig_lm03">
+      <div class="title"><img src="images/listicon.jpg" class="icon" style="padding-top:13px;">
+        <h2>待办事项</h2>
+      </div>
+      <div class="detail">
+        <div class="inner03">
+          <div id="tabCot_product" class="zhutitab">
+            <div class="tabContainer">
+              <ul class="tabHead" id="tabCot_product-li-currentBtn-">
+                <li class="currentBtn"><a href="#" title="设备状况" rel="1">设备状况</a><span class="grey_numb">12</span></li>
+                <li ><a href="#" title="设备管理" rel="2">设备管理</a><span class="red_numb">2</span></li>
+                <li ><a href="#" title="设备添加" rel="3">设备添加</a><span class="red_numb">5</span></li>
+              </ul>
+              <p class="shent"><span>展示数据: </span>
+                <input style="width:30px;" type="text" value="10">
+                <img src="images/sz.jpg" class="icon" style=""></p>
+              <div class="clear"></div>
+            </div>
+            <div id="tabCot_product_1" class="tabCot" >
+              <table class="tabindex" width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <th width="10%" bgcolor="#f8f8f8" scope="col"><div align="center">人物头像</div></th>
+                  <th width="21%" bgcolor="#f8f8f8" scope="col"><span class="titlab">设备名称</span><span class="xila">&or;</span></th>
+                  <th width="22%" bgcolor="#f8f8f8" scope="col"><span class="titlab">id</span><span class="xila">&or;</span></th>
+                  <th width="21%" bgcolor="#f8f8f8" scope="col"><span class="titlab">车间</span><span class="xila">&or;</span></th>
+                  <th width="7%" bgcolor="#f8f8f8" scope="col"><span class="titlab">状态</span><span class="xila">&or;</span></th>
+                  <th width="19%" bgcolor="#f8f8f8" scope="col">操作</th>
+                </tr>
+              </table>
+              <div class="fanye">
+                <p class="fytip">展示1到10的数据</p>
+                <div class="yem">
+                  <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">&lt;</a></li>
+                    <li class="sellify"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">&gt;</a></li>
+                    <li><a href="#">尾页</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>	
+<script type="text/javascript" >
+function test(){
+	$.ajax({
+		url : "djztqb",
+		type : "post", 
+		// data表示发送的数据
+		data :JSON.stringify({}),
+		// 定义发送请求的数据格式为JSON字符串
+		contentType : "application/json;charset=UTF-8",
+		//定义回调响应的数据格式为JSON字符串,该属性可以省略
+		dataType : "json",
+		//成功响应的结果
+		success : function(data){
+			for(i = 0; i <data.idlist.length; i++){
+			$("#tabCot_product_1 tbody").append
+			('<tr><td bgcolor="#f8f8f8">'+'<div align="center"><img src="images/rw.jpg" width="55px" height="54"></div>'+'</td><td class="datacol" bgcolor="#f8f8f8">电机</td><td bgcolor="#f8f8f8">'+data.idlist[i]+'</td><td bgcolor="#f8f8f8">'+data.cjlist[i]+'</td><td bgcolor="#f8f8f8">'+data.gulist[i]+'</td><td bgcolor="#f8f8f8"><a href="#">提醒处理</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">查看</a></td></tr>');
+			}
+		} 
+	});
+} 
+</script>
+</body>
+</html>

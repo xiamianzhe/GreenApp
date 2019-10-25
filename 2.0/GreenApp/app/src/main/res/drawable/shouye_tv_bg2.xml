@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:bottom="-13dip"
+        android:right="-13dip"
+        android:top="-13dip"
+        >
+        <shape>
+            <stroke
+                android:width="4dip"
+                android:color="@color/btn_green" />
+        </shape>
+    </item>
+</layer-list>

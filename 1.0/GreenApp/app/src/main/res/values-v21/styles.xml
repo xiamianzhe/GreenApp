@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="LoginTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:textColorPrimary">@color/blank</item>
+    </style>
+    <style name="Qidong" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:statusBarColor">#0ebe6d</item>
+    </style>
+</resources>

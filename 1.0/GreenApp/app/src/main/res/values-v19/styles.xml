@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="LoginTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:textColorPrimary">@color/blank</item>
+    </style>
+    <style name="Qidong" parent="AppTheme">
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+</resources>

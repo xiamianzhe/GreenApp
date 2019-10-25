@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.CjchooseActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/cjchoose_title"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:contentInsetStart="0dp">
+
+            <ImageView
+                android:id="@+id/cjchoose_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/left" />
+            <TextView
+                android:id="@+id/chejianchooe_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="28sp"
+                android:textColor="@color/bg_main"
+                android:text="车间选择"
+                />
+        </android.support.v7.widget.Toolbar>
+        <ListView
+            android:id="@+id/cjchoose_lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bottom"
+            />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

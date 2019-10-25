@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+    <mapper namespace="com.atguiidu.mybatis.test.employeemapper">
+        <select id="listCategorya" parameterType="String"  resultType="pojo.employee">
+            select * from   Shohiny where shohin_gonghao=#{shohin_gonghao}
+        </select>
+        <!-- 全部员工查询 -->
+        <select id="all" parameterType="String"  resultType="pojo.employee">
+            select * from   Shohiny 
+        </select>
+        <select id="list" parameterType="String"  resultType="pojo.employee">
+            select * from   Shohiny where mima=#{mima}
+        </select>
+        <select id="listCategorya1" parameterType="String"  resultType="pojo.employee">
+            select * from   Shohiny ;  
+        </select>
+<!--         <select id="list" parameterType="String"  resultType="pojo.employee">
+            
+        </select> -->
+        <!-- 添加方法-->
+        <insert id="addCustomer" parameterType="pojo.employee">
+        	insert into  Shohiny(name,shohin_gonghao,shohin_shoujihao,ruzhishijian,zhiwu,zhanghu,mima)
+        	values(#{name},#{shohin_gonghao},#{shohin_shoujihao},#{ruzhishijian},#{zhiwu},#{zhanghu},#{mima})
+        </insert>
+        
+        <!-- 更新方法-->
+        <update id="updateCustomer">
+        update Shohiny
+        set name=#{name},shohin_gonghao=#{shohin_gonghao},shohin_shoujihao=#{shohin_shoujihao},ruzhishijian=#{ruzhishijian},zhiwu=#{zhiwu},zhanghu=#{zhanghu},mima=#{mima}
+        where shohin_gonghao=#{shohin_gonghao} 
+        </update>
+        <!-- 手机号更新方法-->
+        <update id="updateMobile">
+        update Shohiny
+        set shohin_gonghao=#{shohin_gonghao},shohin_shoujihao=#{shohin_shoujihao}
+        where shohin_gonghao=#{shohin_gonghao} 
+        </update>
+        <!-- 删除方法-->
+        <delete id="deleteCustomer">
+        delete from Shohiny where name=#{name}
+        </delete>
+         <!-- DataBean查询方法yrer-->
+        
+        <select id="listCategoryaseven" parameterType="String"  resultType="pojo.DataBean">
+            select * from   Shohincjxxwd  where year=#{year}  
+        </select> 
+        
+        <!-- DataBean查询方法全部year-->
+        
+        <select id="listCategoryaseven1" parameterType="String"  resultType="pojo.DataBean">
+            select * from   Shohincjxxwd  
+        </select> 
+ 
+  		 <select id="selectByTime" parameterType="String"  resultType="pojo.DataBean" >
+    	    select * from Shohincjxxwd where shohin_shijian between #{beginTime}and#{endTime}
+ 		 </select>
+ 		 <!--环境设备运行状态  -->
+        <select id="sdzt" parameterType="String"  resultType="pojo.sbzzbean">
+            select * from   Shohinsbsczt3 where cj=#{cj}
+        </select>
+        <!--生产设备运行状态  -->
+        <select id="djzt" parameterType="String"  resultType="pojo.djztBean">
+            select * from   Shohinsbsczt where cj=#{cj}
+        </select>
+         <!--生产设备运行状态全部查询  -->
+        <select id="djztqb" parameterType="String"  resultType="pojo.djztBean">
+            select * from   Shohinsbsczt
+        </select>
+         <!--环境设备信息  -->
+        <select id="sdxx" parameterType="String"  resultType="pojo.sbxxbean">
+            select * from   Shohinsbxx1  where cj=#{cj}
+        </select>
+        <!--生产设备信息  -->
+        <select id="djxx" parameterType="String"  resultType="pojo.sbxxbean">
+            select * from   Shohindjxx  where cj=#{cj}
+        </select>
+        <!--设备能耗与使用频次查询  -->
+        <select id="np" parameterType="String"  resultType="pojo.NpBean">
+            select * from   Shohinnp  where cj=#{cj}
+        </select>
+        <!--查询时间时间最近的一条记录  -->
+        <select id="selectLast" parameterType="String"  resultType="pojo.DataBean">
+        select * from Shohincjxxwd s where s.cj=#{cj} ORDER BY ABS(NOW() - s.shohin_shijian) ASC limit 1
+    </select>
+<!--71查询方法时间段最高最低查询 -->
+	<!-- <select id="selectByTime2"  resultType="pojo.employee11" >
+    select
+    max(pm) as max_pm,min(pm) as min_pm,
+    max(shohin_shidu) as max_shohin_shidu,min(shohin_shidu) as min_shohin_shidu,
+    MAX(shohin_wendu) as max_shohin_wendu,min(shohin_wendu) as min_shohin_wendu  ,
+    shohin_shijian from shohincjxxwd group by shohin_shijian
+   </select> -->
+   <!--71查询方法时间段最高最低查询 -->
+ 		 <select id="selectByTime2"  resultType="pojo.employee11" >
+    	select
+    	max(pm) as max_pm,min(pm) as min_pm, 
+        max(shohin_shidu) as max_shohin_shidu,min(shohin_shidu) as min_shohin_shidu,
+    	MAX(shohin_wendu) as max_shohin_wendu,min(shohin_wendu) as min_shohin_wendu,
+    	shohin_shijian,
+    	cj  from shohincjxxwd where cj =#{cj} group by shohin_shijian                        
+ 		 </select>
+<!--72温度湿度限定（上限，下限） -->  
+ 		 <select id="selectByTime3"  resultType="pojo.employee12" >
+    	select max(max_pm) as sx_pm,min(min_pm) as xx_pm,
+    	  max(max_shohin_shidu) as sx_shohin_shidu,min(min_shohin_shidu) as xx_shohin_shidu,
+    	  MAX(max_shohin_wendu) as sx_shohin_wendu,min(min_shohin_wendu) as xx_shohin_wendu  
+    	  from shohincwdxd
+ 		 </select>
+<!-- 全部车间查询方法--> 
+        <select id="listCategoryatwo1" parameterType="String"  resultType="pojo.employee2">
+            select * from Shohinzwg;
+        </select>  
+        <!-- 生产设备开关状态更新方法-->
+        <update id="updatedjzt">
+        update Shohinsbsczt
+        set shohin_kaiguang=#{shohin_kaiguang}
+        where cj=#{cj} 
+        </update>
+        <!-- 环境设备开关状态更新方法-->
+        <update id="updatehjzt2">
+        update Shohinsbsczt3
+        set shohin_kgzt=#{shohin_kgzt}
+        where cj=#{cj} 
+        </update>
+        <!-- Mac地址修改 -->
+        <update id="updatedmac">
+        update Shohiny
+        set mac=#{mac}
+        where shohin_gonghao=#{shohin_gonghao}
+        </update>
+    </mapper>

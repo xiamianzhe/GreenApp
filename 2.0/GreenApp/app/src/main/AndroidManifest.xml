@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.domain.greenapp">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAPTURE_AUDIO_OUTPUT" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/green"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/green"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <receiver
+            android:name=".check_net.MyReceiver"
+            android:enabled="true"
+            android:exported="true"></receiver>
+
+        <activity android:name=".Theenvironment.Duanwang" />
+        <activity android:name=".Activity.UsezhinanActivity" />
+        <activity android:name=".hkmonitor_3813.HKActivity" />
+
+        <activity
+            android:name=".Activity.stateActivity"
+            android:theme="@style/Qidong">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.LoginActivity"
+            android:theme="@style/LoginTheme" />
+        <activity
+            android:name=".Activity.MainActivity"
+            android:label="首页" />
+        <activity android:name=".Activity.WenduActivity" />
+        <activity android:name=".Activity.MymsgActivity" />
+        <activity android:name=".Activity.SettingActivity" />
+        <activity android:name=".Activity.PhoneActivity" />
+        <activity android:name=".Activity.ShiduActivity" />
+        <activity android:name=".Activity.PmActivity" />
+        <activity android:name=".Activity.DianjiActivity" />
+        <activity android:name=".Activity.CjchooseActivity" />
+        <activity android:name=".Activity.NullActivity" />
+
+        <service
+            android:name=".Service.JiantingService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".xin.SocketService"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver android:name=".check_net.NetWorkStateReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

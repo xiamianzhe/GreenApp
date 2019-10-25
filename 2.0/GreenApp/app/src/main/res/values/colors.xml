@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="blank">#000</color>
+    <color name="bg_main">#ffffff</color>
+    <color name="title_green">#04ad84</color>
+    <color name="txt_green">#0dca9c</color>
+    <color name="bar_grey">#898989</color>
+    <color name="title_color">#fafbff</color>
+    <color name="login_white">#fafafa</color>
+    <color name="btn_green">#00c482</color>
+    <color name="btn_clickgreen">#009f69</color>
+    <color name="white">#EDEDED</color>
+    <color name="white_click">#bebebe</color>
+    <color name="radiobgcolor">#2ea2f8</color>
+    <color name="radiotxtcolor">#50a2df</color>
+    <color name="radiobgcolor1">#24e7ce</color>
+    <color name="radiotxtcolor1">#67beb3</color>
+    <color name="color_dark">#3C3C3C</color>
+</resources>

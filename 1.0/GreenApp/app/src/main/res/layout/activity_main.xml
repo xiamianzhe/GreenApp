@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_main"
+        android:fitsSystemWindows="true"
+        >
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:contentInsetStart="0dp">
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="28sp"
+                android:textColor="@color/bg_main"
+                android:text="监控"
+                />
+        </android.support.v7.widget.Toolbar>
+
+        <FrameLayout
+            android:id="@+id/layout_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/toolbar_title"
+            android:layout_above="@id/rg_group"
+            >
+        </FrameLayout>
+            <RadioGroup
+                android:id="@+id/rg_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:background="@drawable/radiogroup_normal"
+                >
+                <RadioButton
+                    android:id="@+id/rb_shouye"
+                    style="@style/tab_menu_item"
+                    android:checked="true"
+                    android:drawableTop="@drawable/radiobutton_shouye"
+                    android:text="监控"
+                     />
+                <RadioButton
+                    android:id="@+id/rb_shuju"
+                    style="@style/tab_menu_item"
+                    android:drawableTop="@drawable/radiobutton_shuju"
+                    android:text="分析"
+
+                    />
+                <RadioButton
+                    android:id="@+id/rb_shebei"
+                    style="@style/tab_menu_item"
+                    android:drawableTop="@drawable/radiobutton_shebei"
+                    android:text="设备"
+                    />
+                <RadioButton
+                    android:id="@+id/rb_wode"
+                    style="@style/tab_menu_item"
+                    android:drawableTop="@drawable/radiobutton_wode"
+                    android:text="我的"
+                    />
+            </RadioGroup>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
